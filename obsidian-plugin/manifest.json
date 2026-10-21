@@ -1,0 +1,10 @@
+{
+  "id": "nomad-agent",
+  "name": "Nomad Agent",
+  "version": "0.1.0",
+  "minAppVersion": "0.15.0",
+  "description": "Agentic AI writing, formatting, and LangChain DeepAgent harness powered by Fireworks AI.",
+  "author": "tcondello",
+  "authorUrl": "https://github.com/tcondello",
+  "isDesktopOnly": false
+}

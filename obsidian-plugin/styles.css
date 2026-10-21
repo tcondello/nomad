@@ -1,0 +1,294 @@
+/* Nomad Agent Plugin Styles */
+
+/* Modal Styles */
+.nomad-modal {
+  padding: 16px;
+}
+
+.nomad-preview-container {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  padding: 10px 14px;
+  margin-bottom: 14px;
+}
+
+.nomad-preview-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.nomad-preview-snippet {
+  font-size: 13px;
+  color: var(--text-normal);
+  font-family: var(--font-monospace);
+  max-height: 80px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+.nomad-input-container {
+  margin-bottom: 12px;
+}
+
+.nomad-input-container label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.nomad-instruction-textarea {
+  width: 100%;
+  resize: vertical;
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+.nomad-chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.nomad-chip {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 14px;
+  padding: 3px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.15s ease-in-out;
+}
+
+.nomad-chip:hover {
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border-color: var(--interactive-accent);
+}
+
+.nomad-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.nomad-secondary-btn {
+  background-color: var(--interactive-normal);
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* Sidebar Chat View Styles */
+.nomad-chat-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.nomad-chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  margin-bottom: 8px;
+}
+
+.nomad-header-title-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nomad-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.nomad-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.nomad-status-dot.online {
+  background-color: #10b981;
+  box-shadow: 0 0 6px #10b981;
+}
+
+.nomad-icon-btn {
+  font-size: 11px;
+  padding: 2px 8px;
+}
+
+.nomad-messages-container {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-right: 4px;
+  margin-bottom: 8px;
+}
+
+.nomad-welcome-box {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-m);
+}
+
+.nomad-welcome-box h4 {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.nomad-welcome-box p {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.nomad-welcome-suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nomad-suggestion-chip {
+  font-size: 11px;
+  text-align: left;
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  padding: 6px 10px;
+  border-radius: var(--radius-s);
+  cursor: pointer;
+}
+
+.nomad-suggestion-chip:hover {
+  border-color: var(--interactive-accent);
+}
+
+.nomad-message-row {
+  display: flex;
+  width: 100%;
+}
+
+.nomad-message-row.user {
+  justify-content: flex-end;
+}
+
+.nomad-message-row.assistant {
+  justify-content: flex-start;
+}
+
+.nomad-bubble {
+  max-width: 90%;
+  padding: 8px 12px;
+  border-radius: var(--radius-m);
+  font-size: 13px;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.nomad-bubble.user {
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border-bottom-right-radius: 2px;
+}
+
+.nomad-bubble.assistant {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  color: var(--text-normal);
+  border-bottom-left-radius: 2px;
+}
+
+.nomad-tool-calls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.nomad-tool-badge {
+  font-size: 11px;
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: var(--text-accent);
+}
+
+.nomad-bubble-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+  border-top: 1px solid var(--background-modifier-border);
+  padding-top: 6px;
+}
+
+.nomad-mini-btn {
+  font-size: 10px;
+  padding: 2px 6px;
+  background-color: transparent;
+  border: 1px solid var(--background-modifier-border);
+  cursor: pointer;
+}
+
+.nomad-mini-btn:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.nomad-context-bar {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.nomad-context-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.nomad-input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nomad-chat-input {
+  width: 100%;
+  resize: vertical;
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  padding: 8px;
+  font-size: 12px;
+}
+
+.nomad-input-controls {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nomad-send-btn {
+  padding: 4px 14px;
+  font-size: 12px;
+}

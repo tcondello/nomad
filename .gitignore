@@ -1,0 +1,19 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Environment secrets
+.env
+
+# Node / Obsidian Plugin
+obsidian-plugin/node_modules/
+obsidian-plugin/main.js
+
+# macOS
+.DS_Store
