@@ -1,8 +1,10 @@
 import pytest
 from pathlib import Path
+from click.testing import CliRunner
 from fastapi.testclient import TestClient
 from nomad.server import app
 from nomad.config import settings
+from nomad.cli import main
 from nomad.agent.tools import (
     search_vault,
     find_backlinks,
@@ -75,3 +77,20 @@ def test_inline_missing_key():
     )
     assert response.status_code == 400
     assert "Fireworks API key is not configured" in response.json()["detail"]
+
+
+def test_cli_status():
+    runner = CliRunner()
+    result = runner.invoke(main, ["status"])
+    assert result.exit_code == 0
+    assert "Nomad Agent Status" in result.output
+
+
+def test_cli_install_plugin(tmp_path: Path):
+    runner = CliRunner()
+    result = runner.invoke(main, ["install-plugin", str(tmp_path)])
+    assert result.exit_code == 0
+    plugin_dir = tmp_path / ".obsidian" / "plugins" / "nomad-agent"
+    assert (plugin_dir / "manifest.json").exists()
+    assert (plugin_dir / "main.js").exists()
+    assert (plugin_dir / "styles.css").exists()
